@@ -1,6 +1,8 @@
 # Elegant React Tabs
 Simple and elegant tabs component for react.
 
+npmjs link (https://www.npmjs.com/package/elegant-react-tabs)
+
 ## Usage Instructions
 
 To install it in your project:
