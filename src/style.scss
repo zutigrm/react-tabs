@@ -1,0 +1,81 @@
+$borderColor: #eee;
+$tabBg: #f8f8f8;
+$tabActive: #eee;
+
+$simpleBordClr: #eee;
+$simpleBordClrActive: #333;
+
+.react-tabs {
+
+    /* ===== simple layout style ===== */
+    &.simple {
+
+        .tabs {
+            border-bottom: 1px solid $simpleBordClr;
+
+            .tab {
+                margin-bottom: -1px;
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid transparent;
+
+                &.active,
+                &:hover {
+                    background-color: transparent;
+                    border-color: transparent;
+                    border-color: $simpleBordClrActive;
+                }
+            }
+        }
+
+        .tab-content {
+            border: 0;
+        }
+    }
+
+    /* ===== General style ===== */
+    .tabs {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin-bottom: -1px;
+        padding: 0 15px;
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.right {
+            justify-content: right;
+        }
+
+        .tab {
+            margin: 0 1px;
+            padding: 10px 20px;
+            color: #333;
+            border: 1px solid $borderColor;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            background-color: $tabBg;
+            cursor: pointer;
+            -webkit-transition: background-color 0.2s, border-color 0.2s;
+            -moz-transition: background-color 0.2s, border-color 0.2s;
+            transition: background-color 0.2s, border-color 0.2s;
+
+            &.active  {
+                background-color: $tabActive;
+            }
+
+            &:hover {
+                border-color: $tabActive;
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 15px;
+        border: 1px solid $borderColor;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
